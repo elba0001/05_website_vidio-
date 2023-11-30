@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url(murveg.png);
+  background-size: cover;
+  margin: 0%;
+}
+
+main {
+  margin: 0px auto;
+  max-width: 1400px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*-----------------------------------------MENY------------------------------------------------------*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #8f473c;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: #f28705;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: "Agbalumo";
+  font-size: 1.5rem;
+}
+
+.menu a:hover {
+  color: #d4145a;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #f28705;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #f28705;
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+.box {
+  background-color: #8f473c;
+  background-size: cover;
+  margin: 30px;
+}
+
+/*--------------------------------------------TEKST ---------------------------------------------------*/
+
+h1 {
+  font-family: "Agbalumo";
+  font-size: 3rem;
+  color: #f28705;
+  text-align: center;
+}
+h2 {
+  font-family: "Agbalumo";
+  font-size: 1.5rem;
+  color: rgb(240, 228, 232);
+  margin: 20px;
+  text-align: center;
+}
+
+.gå_til_vidio {
+  font-family: "Agbalumo";
+  display: inline-block;
+  color: white;
+  background: #560a0e;
+  padding: 2% 5%;
+  line-height: 1.4;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+  text-decoration: none;
+  margin: 2%;
+  margin-left: 550px;
+}
+
+.portret {
+  border-style: solid;
+  color: #8f473c;
+  padding: 20px;
+}
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+
+  padding-top: calc(100% / (16 / 9));
+}
+
+iframe {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+.video {
+  position: absolute;
+  width: auto;
+  top: 30%;
+  left: 20%;
+}
