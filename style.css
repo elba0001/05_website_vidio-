@@ -178,9 +178,3 @@ iframe {
   height: 100%;
   width: 100%;
 }
-.video {
-  position: absolute;
-  width: auto;
-  top: 30%;
-  left: 20%;
-}
